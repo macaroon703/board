@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>content</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+
+
+</head>
+<body>
+    <div class = "container">
+
+        <br>
+
+        <h1 class="text-center">
+            <a href="/">게시판</a>
+        </h1>
+
+        <br>
+        <br>
+       
+        <p>제목</p>
+        <div style = "height : 50px "class="form-control">{{ data_list[1] }}</div> <br>
+        <p>작성자</p>
+        <div style = "height : 50px "class="form-control">{{ data_list[2] }}</div> <br>
+
+        <form action="/content/update_action" method="post">
+            <p>내용</p>
+            <textarea id="update_content" name="update_content" class="form-control" rows = "10" ></textarea>
+            <br>
+
+            <div class="form-row float-right" style="text-align: right">
+                <button type="submit" class="btn btn-primary">저장</button>
+            </div>
+
+            <input type="hidden" id="num2" name="num2" value="{{ data_list[0] }}" class="form-control">
+        </form>
+            
+            
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
